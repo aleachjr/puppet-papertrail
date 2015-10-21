@@ -9,7 +9,7 @@ class papertrail::install {
     owner   => 'root',
     group   => 'root',
     mode    => '0640',
-    content => template('${module_name}/etc/rsyslog.d/papertrail.conf.erb'),
+    content => template("${module_name}/etc/rsyslog.d/papertrail.conf.erb"),
     require => Package['rsyslog', 'rsyslog-gnutls'],
     notify  => Service['rsyslog'];
   }
