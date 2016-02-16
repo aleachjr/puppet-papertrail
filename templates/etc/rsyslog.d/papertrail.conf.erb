@@ -5,6 +5,10 @@ $DefaultNetstreamDriver gtls                                # use gtls netstream
 $ActionSendStreamDriverMode 1                               # require TLS
 $ActionSendStreamDriverAuthMode x509/name                   # authenticate by hostname
 $ActionSendStreamDriverPermittedPeer *.papertrailapp.com
+
+$SystemLogRateLimitInterval 0
+$SystemLogRateLimitBurst 0
+
 <%- if @action_resume_interval -%>
 $ActionResumeInterval <%= @action_resume_interval %>
 <%- end -%>
